@@ -59,7 +59,7 @@ angular.module('starter.controllers', [])
       //make a copy of local storage so that local storage remains persistant
       cardTypes = Array.prototype.slice.call($localstorage.getObject('temp'));
       //load 3 cards for view
-      $scope.cards = Array.prototype.splice.call(cardTypes, 2,5);
+      $scope.cards = Array.prototype.splice.call(cardTypes, 2,4);
     }
   };
 
