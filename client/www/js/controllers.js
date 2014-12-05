@@ -59,7 +59,7 @@ angular.module('starter.controllers', [])
       //make a copy of local storage so that local storage remains persistant
       cardTypes = Array.prototype.slice.call($localstorage.getObject('temp'));
       //load 3 cards for view
-      $scope.cards = Array.prototype.splice.call(cardTypes, 0,3);
+      $scope.cards = Array.prototype.splice.call(cardTypes, 2,5);
     }
   };
 
@@ -69,17 +69,17 @@ angular.module('starter.controllers', [])
 .controller('CardCtrl', function($scope, TDCardDelegate) {
   $scope.cardSwipedLeft = function(index) {
     console.log('LEFT SWIPE');
-    $scope.addCard();
+    //$scope.addCard();
   };
   $scope.cardSwipedRight = function(index) {
     console.log('RIGHT SWIPE');
-    $scope.addCard();
+    //$scope.addCard();
   };
 })
 
 .filter('largerimages', function () {
   console.log('this ran');
     return function (item) {
-      return item.replace('s90', 's360');  
+      return item.replace('s90', 's250');  
     }
   });
